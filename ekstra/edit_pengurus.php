@@ -6,12 +6,14 @@ $row = mysqli_fetch_assoc($result);
 
 if (isset($_POST["submit"])) {
     $new_name = $_POST['new_name'];
+    $new_panggilan = $_POST['new_panggilan'];
     $new_nim = $_POST['new_nim'];
     $new_divisi = $_POST['new_divisi'];
     $new_posisi = $_POST['new_posisi'];
     $new_ig = $_POST['new_ig'];
     $new_linkedin = $_POST['new_linkedin'];
     $new_github = $_POST['new_github'];
+
 
     if ($_FILES['fotopengurus']['size'] > 0) {
         $uploadDir = "uploads/pengurus/";
@@ -24,8 +26,8 @@ if (isset($_POST["submit"])) {
     }
 
 
-    $update_pengurus = $conn->prepare("UPDATE pengurus SET nama=?, nim=?, foto=?, divisi=?, posisi=?, ig_link=?, linkedin_link=?, github_link=? WHERE id_pengurus=?");
-    $update_pengurus->bind_param("sssssssss", $new_name, $new_nim, $new_foto, $new_divisi, $new_posisi, $new_ig, $new_linkedin, $new_github, $id_pengurus);
+    $update_pengurus = $conn->prepare("UPDATE pengurus SET nama=?, nama_panggilan=?, nim=?, foto=?, divisi=?, posisi=?, ig_link=?, linkedin_link=?, github_link=? WHERE id_pengurus=?");
+    $update_pengurus->bind_param("ssssssssss", $new_name, $new_panggilan, $new_nim, $new_foto, $new_divisi, $new_posisi, $new_ig, $new_linkedin, $new_github, $id_pengurus);
 
     if ($update_pengurus->execute()) {
         echo '<script>window.location.href = "?page=pengurus";</script>';
@@ -59,6 +61,10 @@ if (isset($_POST["submit"])) {
                 <div>
                     <label for="new_name" class="block text-sm font-medium leading-6">Nama:</label>
                     <input type="text" name="new_name" value="<?= $row['nama'] ?>" required class="block w-full rounded-md  p-3 border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                </div>
+                <div>
+                    <label for="new_panggilan" class="block text-sm font-medium leading-6">Alias:</label>
+                    <input type="text" name="new_panggilan" value="<?= $row['nama_panggilan'] ?>" required class="block w-full rounded-md  p-3 border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
                 </div>
                 <div>
                     <label for="new_nim" class="block text-sm font-medium leading-6">NIM:</label>

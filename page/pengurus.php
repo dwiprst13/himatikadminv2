@@ -18,7 +18,7 @@ if (isset($_GET['page']) && $_GET['page'] == 'tambah_pengurus') {
 ?>
 
     <body>
-        <div class="text-gray-900 bg-gray-200 h-screen">
+        <div class="text-gray-900 bg-gray-200 min-h-screen">
             <div class="p-4 flex">
                 <h1 class="text-xl">
                     Daftar Pengurus
@@ -44,18 +44,24 @@ if (isset($_GET['page']) && $_GET['page'] == 'tambah_pengurus') {
             <div class="px-3 py-4 flex justify-center">
                 <table class="w-full text-md table-auto bg-white shadow-md rounded mb-4">
                     <tbody>
-                        <tr class="border-b">
+                        <tr class="">
                             <th class="text-center p-3 px-5">Id</th>
                             <th class="text-center p-3 px-5">Nama</th>
+                            <th class="text-center p-3 px-5">Alias</th>
                             <th class="text-center p-3 px-5">NIM</th>
                             <th class="text-center p-3 px-5">Divisi</th>
                             <th class="text-center p-3 px-5">Posisi</th>
                             <th class="text-center p-3 px-5">Foto</th>
-                            <th class="text-center p-3 px-5">IG</th>
-                            <th class="text-center p-3 px-5">Linkedin</th>
-                            <th class="text-center p-3 px-5">Github</th>
-                            <th class="text-center p-3 px-5">Edit</th>
-                            <th class="text-center p-3 px-5">Hapus</th>
+                            <th class="text-center p-3 px-5">
+                                <i class="fab fa-instagram" aria-hidden="true"></i>
+                            </th>
+                            <th class="text-center p-3 px-5">
+                                <i class="fab fa-linkedin" aria-hidden="true"></i>
+                            </th>
+                            <th class="text-center p-3 px-5">
+                                <i class="fab fa-github" aria-hidden="true"></i>
+                            </th>
+                            <th class="text-center p-3 px-5">Aksi</th>
                             <th></th>
                         </tr>
                         <?php
@@ -67,42 +73,43 @@ if (isset($_GET['page']) && $_GET['page'] == 'tambah_pengurus') {
                         }
 
                         while ($row = mysqli_fetch_assoc($query)) {
-                            //     $nim = $row['nim'];
-                            //     }
+                            $nama = $row['nama'];
+                            if (strlen($nama) > 12) {
+                                $nama = substr($nama, 0, 12) . '**';
+                            }
+                                
                         ?>
                             <tr class="px-3 border-b bg-gray-100">
-                                <td class="p-3 text-center px-5"><?= $row['id_pengurus'] ?></td>
-                                <td class="p-3 text-center px-5"><?= $row['nama'] ?></td>
-                                <td class="p-3 text-center px-5"><?= $row['nim'] ?></td>
-                                <td class="p-3 text-center px-5"><?= $row['divisi'] ?></td>
-                                <td class="p-3 text-center px-5"><?= $row['posisi'] ?></td>
-                                <td class="p-3 text-center px-5">
+                                <td class="py-2 text-center px-2"><?= $row['id_pengurus'] ?></td>
+                                <td class="py-2 text-center px-2"><?= $row['nama'] ?></td>
+                                <td class="py-2 text-center px-2"><?= $row['nama_panggilan'] ?></td>
+                                <td class="py-2 text-center px-2"><?= $row['nim'] ?></td>
+                                <td class="py-2 text-center px-2"><?= $row['divisi'] ?></td>
+                                <td class="py-2 text-center px-2"><?= $row['posisi'] ?></td>
+                                <td class="py-2 text-center px-2">
                                     <?= !empty($row['foto']) ? '<span class="text-green-500">✓</span>' : '<span class="text-red-500">x</span>' ?>
                                 </td>
-                                <td class="p-3 text-center px-5">
+                                <td class="py-2 text-center px-2">
                                     <?= !empty($row['ig_link']) ? '<span class="text-green-500">✓</span>' : '<span class="text-red-500">x</span>' ?>
                                 </td>
-                                <td class="p-3 text-center px-5">
+                                <td class="py-2 text-center px-2">
                                     <?= !empty($row['linkedin_link']) ? '<span class="text-green-500">✓</span>' : '<span class="text-red-500">x</span>' ?>
                                 </td>
-                                <td class="p-3 text-center px-5">
+                                <td class="py-2 text-center px-2">
                                     <?= !empty($row['github_link']) ? '<span class="text-green-500">✓</span>' : '<span class="text-red-500">x</span>' ?>
                                 </td>
-                                <td class="p-3 text-center px-5">
+                                <td class="py-2 text-center px-2 flex gap-1">
                                     <form action="" method="get">
                                         <input type="hidden" name="page" value="edit_pengurus">
                                         <input type="hidden" name="id_pengurus" value="<?= $row['id_pengurus'] ?>">
-                                        <button type="submit" class="mr-3 text-sm bg-blue-500 hover:bg-blue-700 text-white py-1 px-2 rounded focus:outline-none focus:shadow-outline">Edit</button>
+                                        <button type="submit" class="mr-3 text-sm bg-blue-500 hover:bg-blue-700 text-white py-1 px-2 rounded focus:outline-none focus:shadow-outline"><i class="fas fa-edit" aria-hidden="true"></i></button>
                                     </form>
-                                </td>
-                                <td class="p-3 text-center px-5">
                                     <form action="" method="post" onsubmit="return confirm('Apakah kamu yakin ingin menghapus data ini?');">
                                         <input type="hidden" name="id_pengurus" value="<?= $row['id_pengurus'] ?>">
-                                        <button type="submit" name="hapus" class="mr-3 text-sm bg-red-500 hover:bg-red-700 text-white py-1 px-2 rounded focus:outline-none focus:shadow-outline">Hapus</button>
+                                        <button type="submit" name="hapus" class="mr-3 text-sm bg-red-500 hover:bg-red-700 text-white py-1 px-2 rounded focus:outline-none focus:shadow-outline"><i class="fas fa-trash" aria-hidden="true"></i></button>
                                     </form>
                                 </td>
                             </tr>
-
                         <?php } ?>
                     </tbody>
                 </table>

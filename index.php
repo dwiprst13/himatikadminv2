@@ -24,6 +24,7 @@ $data_admin_login = mysqli_fetch_array($q_data_admin_login);
     <script src="../assets/js/script.js" defer></script>
     <title>Himatik Admin</title>
     <link rel="stylesheet" href="../assets/css/style.css">
+    <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -101,7 +102,7 @@ $data_admin_login = mysqli_fetch_array($q_data_admin_login);
                 </div>
             </div>
         </div>
-        <div class="bg-gray-200 min-h-screen items-center shadow-md shadow-black/5 sticky top-0 left-0 z-30">
+        <div class="bg-gray-200 items-center shadow-md shadow-black/5 sticky top-0 left-0 z-30">
             <?php
             $page = isset($_GET['page']) ? $_GET['page'] : 'dashboard';
 
