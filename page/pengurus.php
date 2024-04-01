@@ -74,14 +74,14 @@ if (isset($_GET['page']) && $_GET['page'] == 'tambah_pengurus') {
 
                         while ($row = mysqli_fetch_assoc($query)) {
                             $nama = $row['nama'];
-                            if (strlen($nama) > 12) {
-                                $nama = substr($nama, 0, 12) . '**';
+                            if (strlen($nama) > 15) {
+                                $nama = substr($nama, 0, 15) . '**';
                             }
-                                
+
                         ?>
                             <tr class="px-3 border-b bg-gray-100">
                                 <td class="py-2 text-center px-2"><?= $row['id_pengurus'] ?></td>
-                                <td class="py-2 text-center px-2"><?= $row['nama'] ?></td>
+                                <td class="py-2 text-center px-2"><?= $nama ?></td>
                                 <td class="py-2 text-center px-2"><?= $row['nama_panggilan'] ?></td>
                                 <td class="py-2 text-center px-2"><?= $row['nim'] ?></td>
                                 <td class="py-2 text-center px-2"><?= $row['divisi'] ?></td>

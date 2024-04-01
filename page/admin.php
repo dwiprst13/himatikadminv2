@@ -16,6 +16,7 @@ if (isset($_GET['page']) && $_GET['page'] == 'tambah_admin') {
     include 'ekstra/tambah_admin.php';
 } else {
 ?>
+
     <body>
         <div class="text-gray-900 bg-gray-200 h-screen">
             <div class="p-4 flex">
@@ -49,8 +50,7 @@ if (isset($_GET['page']) && $_GET['page'] == 'tambah_admin') {
                             <th class="text-center p-3 px-5">Email</th>
                             <th class="text-center p-3 px-5">NIM</th>
                             <th class="text-center p-3 px-5">Role</th>
-                            <th class="text-center p-3 px-5">Hapus</th>
-                            <th class="text-center p-3 px-5">Edit</th>
+                            <th class="text-center p-3 px-5">Aksi</th>
                             <th></th>
                         </tr>
                         <?php
@@ -62,6 +62,7 @@ if (isset($_GET['page']) && $_GET['page'] == 'tambah_admin') {
                         }
 
                         while ($row = mysqli_fetch_assoc($query)) {
+                            $role = $row['role'];
                             $nim = $row['nim'];
                             $email = $row['email'];
                             if (strlen($email) > 12) {
@@ -73,19 +74,29 @@ if (isset($_GET['page']) && $_GET['page'] == 'tambah_admin') {
                                 <td class="p-3 text-center px-5"><?= $row['nama'] ?></td>
                                 <td class="p-3 text-center px-5"><?= $row['email'] ?></td>
                                 <td class="p-3 text-center px-5"><?= $row['nim'] ?></td>
-                                <td class="p-3 text-center px-5"><?= $row['role'] ?></td>
                                 <td class="p-3 text-center px-5">
-                                    <form action="" method="get">
-                                        <input type="hidden" name="page" value="edit_admin">
-                                        <input type="hidden" name="id_admin" value="<?= $row['id_admin'] ?>">
-                                        <button type="submit" class="mr-3 text-sm bg-blue-500 hover:bg-blue-700 text-white py-1 px-2 rounded focus:outline-none focus:shadow-outline">Edit</button>
-                                    </form>
+                                    <?php
+                                    if ($role === 'superAdmin') {
+                                        echo '<p class="text-red-500">superAdmin</p>';
+                                    } elseif ($role === 'Admin') {
+                                        echo '<p class="text-green-500">superAdmin</p>';
+                                    } elseif ($role === 'Jurnalis') {
+                                        echo '<p class="text-blue-500">Jurnalis</p>';
+                                    }
+                                    ?>
                                 </td>
-                                <td class="p-3 text-center px-5">
-                                    <form action="" method="post" onsubmit="return confirm('Apakah kamu yakin ingin menghapus data ini?');">
-                                        <input type="hidden" name="id_admin" value="<?= $row['id_admin'] ?>">
-                                        <button type="submit" name="hapus" class="mr-3 text-sm bg-red-500 hover:bg-red-700 text-white py-1 px-2 rounded focus:outline-none focus:shadow-outline">Hapus</button>
-                                    </form>
+                                <td class="px-5">
+                                    <div class=" flex gap-5 justify-between w-[70%] mx-auto">
+                                        <form action="" method="get">
+                                            <input type="hidden" name="page" value="edit_admin">
+                                            <input type="hidden" name="id_admin" value="<?= $row['id_admin'] ?>">
+                                            <button type="submit" class="mr-3 text-sm bg-blue-500 hover:bg-blue-700 text-white py-1 px-2 rounded focus:outline-none focus:shadow-outline">Edit</button>
+                                        </form>
+                                        <form action="" method="post" onsubmit="return confirm('Apakah kamu yakin ingin menghapus data ini?');">
+                                            <input type="hidden" name="id_admin" value="<?= $row['id_admin'] ?>">
+                                            <button type="submit" name="hapus" class="mr-3 text-sm bg-red-500 hover:bg-red-700 text-white py-1 px-2 rounded focus:outline-none focus:shadow-outline">Hapus</button>
+                                        </form>
+                                    </div>
                                 </td>
                             </tr>
                         <?php } ?>

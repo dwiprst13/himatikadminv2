@@ -25,6 +25,8 @@ $data_admin_login = mysqli_fetch_array($q_data_admin_login);
     <title>Himatik Admin</title>
     <link rel="stylesheet" href="../assets/css/style.css">
     <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.tiny.cloud/1/92xg6wlqw9faoyfala0uu4ysc1irr953fn9goktkphy4w1ir/tinymce/7/tinymce.min.js" referrerpolicy="origin"></script>
+
 </head>
 
 <body>
@@ -102,7 +104,7 @@ $data_admin_login = mysqli_fetch_array($q_data_admin_login);
                 </div>
             </div>
         </div>
-        <div class="bg-gray-200 items-center shadow-md shadow-black/5 sticky top-0 left-0 z-30">
+        <div class="bg-gray-200 min-h-screen items-center shadow-md shadow-black/5 sticky top-0 left-0 z-30">
             <?php
             $page = isset($_GET['page']) ? $_GET['page'] : 'dashboard';
 
