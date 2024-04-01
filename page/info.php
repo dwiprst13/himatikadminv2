@@ -1,22 +1,22 @@
 <?php
-$galeri = "SELECT * FROM galeri ORDER BY id_galeri";
-$querygaleri = mysqli_query($conn, $galeri);
+$info = "SELECT * FROM info ORDER BY id_info";
+$queryinfo = mysqli_query($conn, $info);
 
-if (isset($_GET['page']) && $_GET['page'] == 'edit_galeri') {
-    include 'page/tambah_galeri.php';
+if (isset($_GET['page']) && $_GET['page'] == 'edit_info') {
+    include 'page/tambah_info.php';
 } else {
 ?>
 
     <body class="bg-gray-200">
         <div class="p-4 flex">
             <h1 class="text-xl">
-                Daftar Info
+                Daftar info
             </h1>
         </div>
         <div class=" px-3 py-4 flex justify-between">
             <div>
                 <button class="mr-3 text-sm bg-blue-500 hover:bg-blue-700 text-white py-1 px-2 rounded focus:outline-none focus:shadow-outline">
-                    <a href="?page=tambah_galeri">Tambah</a>
+                    <a href="?page=tambah_info">Tambah</a>
                 </button>
             </div>
             <div class="mb-3">
@@ -36,13 +36,17 @@ if (isset($_GET['page']) && $_GET['page'] == 'edit_galeri') {
         <section class="w-[100%] mx-auto ">
             <div class="container flex flex-nowrap w-[90%] gap-5 columns-3 mx-auto grid px-4 py-16 lg:grid-cols-12">
                 <?php
-                while ($row_galeri = mysqli_fetch_assoc($querygaleri)) {
+                if (mysqli_num_rows($queryinfo) > 0) {
+                    while ($row_info = mysqli_fetch_assoc($queryinfo)) {
                 ?>
-                    <a href="?page=detail_galeri&id_galeri=<?= $row_galeri['id_galeri'] ?>" class="card-galeri justify-center p-2 bg-gray-700 text-white md:col-span-3 lg:col-span-3 rounded-lg">
-                        <h1 class="text-center pt-3 text-lg"><b><?= $row_galeri['judul'] ?></b></h1>
-                        <img src="<?= $row_galeri['img'] ?>" alt="" class="h-60 pt-3 w-[100%]">
-                        <p class="text-justify text-sm pt-3 line-clamp-3"><?= $row_galeri['deskripsi'] ?></p>
-                    </a>
+
+                    <?php
+                    }
+                } else {
+                    ?>
+                    <div class="text-center w-full col-span-12">
+                        <p class="text-[3.5rem]">Daftar info kosong.</p>
+                    </div>
                 <?php
                 }
                 ?>
@@ -51,7 +55,7 @@ if (isset($_GET['page']) && $_GET['page'] == 'edit_galeri') {
 
         <script>
             function editUser() {
-                window.location.href = "?page=edit_user&id_galeri=<?= $row['id_galeri'] ?>";
+                window.location.href = "?page=edit_user&id_info=<?= $row['id_info'] ?>";
             }
         </script>
     </body>

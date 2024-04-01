@@ -51,7 +51,6 @@ if (isset($_GET['page']) && $_GET['page'] == 'tambah_admin') {
                             <th class="text-center p-3 px-5">NIM</th>
                             <th class="text-center p-3 px-5">Role</th>
                             <th class="text-center p-3 px-5">Aksi</th>
-                            <th></th>
                         </tr>
                         <?php
                         if (isset($_POST['search'])) {

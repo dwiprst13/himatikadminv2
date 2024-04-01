@@ -1,22 +1,30 @@
 <?php
-$pesan = "SELECT * FROM pesan ORDER BY id_pesan";
-$queryPesan = mysqli_query($conn, $pesan);
+$artikel = "SELECT * FROM artikel ORDER BY id_artikel";
+$queryArtikel = mysqli_query($conn, $artikel);
 
-if (isset($_GET['page']) && $_GET['page'] == 'edit_pesan') {
-    include 'page/tambah_pesan.php';
+if (isset($_GET['page']) && $_GET['page'] == 'edit_artikel') {
+    include 'page/tambah_artikel.php';
 } else {
 ?>
+    <!DOCTYPE html>
+    <html lang="en">
 
-    <body class="bg-gray-200">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+
+    <body class="bg-gray-200 min-h-screen">
         <div class="p-4 flex">
             <h1 class="text-xl">
-                Daftar Pesan
+                Daftar Artikel
             </h1>
         </div>
         <div class=" px-3 py-4 flex justify-between">
             <div>
                 <button class="mr-3 text-sm bg-blue-500 hover:bg-blue-700 text-white py-1 px-2 rounded focus:outline-none focus:shadow-outline">
-                    <a href="?page=tambah_pesan">Tambah</a>
+                    <a href="?page=tambah_artikel">Tambah</a>
                 </button>
             </div>
             <div class="mb-3">
@@ -36,30 +44,34 @@ if (isset($_GET['page']) && $_GET['page'] == 'edit_pesan') {
         <section class="w-[100%] mx-auto ">
             <div class="container flex flex-nowrap w-[90%] gap-5 columns-3 mx-auto grid px-4 py-16 lg:grid-cols-12">
                 <?php
-                if (mysqli_num_rows($queryPesan) > 0) {
-                    while ($row_pesan = mysqli_fetch_assoc($queryPesan)) {
+                if (mysqli_num_rows($queryArtikel) > 0) {
+                    while ($row_artikel = mysqli_fetch_assoc($queryArtikel)) {
+                        $path_baru = $row_artikel['img'];
+                        $status = $row_artikel['status'];
+                        $content = $row_artikel['content'];
+                        if (strlen($content) > 100) {
+                            $content = substr($content, 0, 100) . '...';
+                        }
+                        $card_class = ($status === 'publish') ? 'bg-white' : 'bg-orange-200';
                 ?>
-
+                        <a href="?page=detail_artikel&id_artikel=<?= $row_artikel['id_artikel'] ?>" class="card-galeri justify-center p-2 text-gray-900 md:col-span-4 lg:col-span-4 rounded-lg <?= $card_class ?>">
+                            <h1 class="text-center pt-3 text-lg line-clamp-1"><b><?= $row_artikel['judul'] ?></b></h1>
+                            <img src="<?= $path_baru ?>" alt="" class="h-60 pt-3 w-[100%]">
+                            <p class="text-justify text-sm pt-3 line-clamp-3"><?= $content?></p>
+                        </a>
                     <?php
                     }
                 } else {
                     ?>
                     <div class="text-center w-full col-span-12">
-                        <p class="text-[3.5rem]">Daftar Pesan kosong.</p>
+                        <p class="text-[3.5rem]">Daftar artikel kosong.</p>
                     </div>
                 <?php
                 }
                 ?>
             </div>
         </section>
-
-        <script>
-            function editUser() {
-                window.location.href = "?page=edit_user&id_pesan=<?= $row['id_pesan'] ?>";
-            }
-        </script>
     </body>
-
     </html>
 <?php
 }
