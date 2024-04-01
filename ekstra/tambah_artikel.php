@@ -87,7 +87,7 @@ if (isset($_POST["submit"])) {
                     var reader = new FileReader();
                     reader.onload = function(e) {
                         img.setAttribute("src", e.target.result);
-                        gambarText.style.display = "none";
+                        gambarText.style.display = "block";
                     };
                     reader.readAsDataURL(input.files[0]);
                 } else {

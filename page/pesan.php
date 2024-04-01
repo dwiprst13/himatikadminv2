@@ -1,40 +1,62 @@
-<div class="">
-    <p>Apa itu website? Website adalah sebuah halaman atau kumpulan halaman yang berfungsi sebagai tempat berbagi informasi, produk, atau layanan secara online.</p>
-    <p>Dalam era digital seperti sekarang ini, website telah menjadi salah satu media yang sangat penting dalam dunia bisnis. Tidak hanya digunakan oleh perusahaan, website juga sangat bermanfaat bagi individu yang ingin memperluas jangkauan informasi atau menunjukkan karya-karya mereka kepada masyarakat luas.</p>
-    <p>Dengan adanya website, pengguna internet dapat dengan mudah mengakses informasi yang diinginkan kapanpun dan dimanapun mereka berada. Ingin tahu lebih banyak pengertian website, jenis-jenis website, hingga manfaatnya?&nbsp;</p>
-    <h2>Apa itu Website?</h2>
-    <p>Website adalah kumpulan halaman web yang saling terhubung dan dapat diakses melalui internet. Website biasanya berisi informasi atau konten yang ditampilkan dalam berbagai format seperti teks, gambar, audio, dan video.</p>
-    <p>Website dapat digunakan untuk berbagai tujuan, mulai dari menyediakan informasi tentang perusahaan atau produk hingga menjadi platform untuk berkomunikasi dan berbagi pendapat. Tidak hanya itu, website juga dapat digunakan sebagai alat pemasaran dan promosi.</p>
-    <p>Contoh-contoh website yang populer termasuk website&nbsp;e-commerce seperti Tokopedia, situs berita seperti detik.com, dan situs jejaring sosial seperti Instagram.</p>
-    <h2><span id="Manfaat_dan_Fungsi_Website">Manfaat dan Fungsi Website</span></h2>
-    <p>Website memiliki manfaat yang sangat penting dalam dunia digital saat ini. Fungsi website antara lain sebagai platform untuk berkomunikasi, menyampaikan informasi, menjual produk atau jasa, serta memperluas jangkauan bisnis.</p>
-    <p>Dengan adanya website, perusahaan dapat lebih mudah ditemukan oleh calon pelanggan,&nbsp;<a title="meningkatkan brand awareness" href="https://www.dewaweb.com/blog/brand-awareness/">meningkatkan brand awareness</a>, dan meningkatkan penjualan. Lantas, apa manfaat website yang lainnya? Berikut informasinya hanya untuk kamu.</p>
-    <h3><span id="1_Membangun_branding">1. Membangun branding</span></h3>
-    <p>Salah satu manfaat utama website adalah untuk membangun&nbsp;<a title="branding" href="https://www.dewaweb.com/blog/strategi-personal-branding/">branding</a>. Website dapat memberikan manfaat yang signifikan dalam memperkuat citra dan kepercayaan mereka.</p>
-    <p>Dengan website, perusahaan dapat menyampaikan gambaran yang jelas tentang produk dan layanan mereka kepada pengguna.</p>
-    <p>Selain itu, website juga bisa menjadi platform untuk berinteraksi dengan pelanggan, memberikan informasi terkini, dan membangun hubungan yang baik dengan mereka. Itu sebabnya, website memiliki peran yang krusial dalam proses membangun branding suatu perusahaan.</p>
-    <h3><span id="2_Wadah_untuk_berkomunikasi">2. Wadah untuk berkomunikasi</span></h3>
-    <p>Website merupakan wadah yang sangat penting untuk berkomunikasi. Adanya website dapat dijadikan sebagai sarana untuk memfasilitasi komunikasi antara individu, perusahaan, dan organisasi.</p>
-    <p>Sebagai sarana komunikasi, website memberikan kemudahan akses informasi dan memungkinkan pertukaran pesan secara efisien dan efektif. Berikut beberapa website yang dijadikan sebagai sarana untuk berkomunikasi, seperti Kaskus, Quora, hingga Reddit.</p>
-    <h3><span id="3_Meningkatkan_kredibilitas">3. Meningkatkan kredibilitas</span></h3>
-    <p>Meningkatkan kredibilitas perusahaan dapat dicapai dengan menggunakan website. Sebab, website dapat memberikan kemudahan akses informasi tentang perusahaan kepada calon pelanggan dan pemangku kepentingan lainnya.</p>
-    <p>Selain itu, website juga dapat menunjukkan profesionalitas perusahaan dan memberikan pengalaman pengguna yang positif.</p>
-    <p>Fungsi lain dari website adalah sebagai alat untuk memperluas pangsa pasar dan memperkenalkan produk atau layanan perusahaan kepada khalayak yang lebih luas. Dengan demikian, adanya website sangat penting dalam membangun dan menjaga reputasi serta kepercayaan terhadap perusahaan.</p>
-    <h2><span id="Unsur-Unsur_Website">Unsur-Unsur Website</span></h2>
-    <p>Unsur-unsur website melibatkan domain, hosting, bahasa pemrograman, konten, dan tampilan. Supaya lebih jelas memahami unsur-unsurnya, berikut informasi yang sudah Dewaweb rangkum hanya untuk kamu.</p>
-    <h3><span id="1_Domain">1. Domain</span></h3>
-    <p>Unsur-unsur website meliputi&nbsp;<a title="domain" href="https://www.dewaweb.com/blog/apa-itu-domain/">domain</a>. Sebagai informasi, domain adalah alamat unik yang digunakan untuk mengakses situs web.</p>
-    <p>Sederhananya, pengertian domain adalah bagian dari URL yang menunjukkan asal dan jenis website. Contoh domain seperti &ldquo;.com&rdquo;, &ldquo;.id&rdquo;, atau &ldquo;.co.id&rdquo; memberikan identitas dan tujuan situs tersebut.</p>
-    <h3><span id="2_Hosting">2. Hosting</span></h3>
-    <p>Selain domain, hosting termasuk ke dalam unsur website. Hosting adalah layanan penyimpanan data dan website di server internet. Ada beberapa jenis hosting yang dapat dipilih, seperti shared hosting,&nbsp;<a title="VPS hosting" href="https://www.dewaweb.com/blog/apa-itu-vps/">VPS hosting</a>, dan&nbsp;<a title="dedicated hosting" href="https://www.dewaweb.com/blog/mengenal-dedicated-hosting-adalah/">dedicated hosting</a>.</p>
-    <h3><span id="3_Bahasa_Pemrograman">3. Bahasa Pemrograman</span></h3>
-    <p>Unsur website yang selanjutnya adalah bahasa pemrograman. Sebagai informasi, bahasa pemrograman adalah instruksi yang digunakan untuk membuat dan mengatur tampilan serta fungsi-fungsi sebuah situs web. Contoh bahasa pemrograman yang umum digunakan antara lain&nbsp;<a title="HTML" href="https://www.dewaweb.com/blog/panduan-lengkap-untuk-belajar-html-bagi-pemula/">HTML</a>,&nbsp;<a title="CSS" href="https://www.dewaweb.com/blog/belajar-css-pengertian-peran-fungsi-dan-macamnya/">CSS</a>,&nbsp;<a title="JavaScript" href="https://www.dewaweb.com/blog/mengenal-javascript/">JavaScript</a>, dan&nbsp;<a title="PHP" href="https://www.dewaweb.com/blog/apa-itu-php/">PHP</a>.</p>
-    <h3><span id="4_Konten">4. Konten</span></h3>
-    <p>Selanjutnya, konten termasuk ke dalam unsur website, yang meliputi teks, gambar, video, dan foto. Dengan adanya konten di dalamnya, secara tidak langsung website dapat menyediakan informasi yang lengkap dan dibutuhkan oleh pembaca.</p>
-    <h3><span id="5_Tampilan">5. Tampilan</span></h3>
-    <p>Unsur-unsur website yang terakhir adalah tampilan. Tanpa disadari, tampilan website yang unik dapat menarik perhatian pengguna dan menciptakan pengalaman pengguna yang positif.</p>
-    <p>Selain itu,&nbsp;kecepatan loading website&nbsp;juga sangat penting untuk menjaga minat pengguna dan menghindari kemungkinan mereka meninggalkan website karena proses loading yang terlalu lama. Itulah mengapa desain tampilan sangat penting bagi keberhasilan sebuah website.</p>
-    <h2><span id="Jenis-Jenis_Website">Jenis-Jenis Website</span></h2>
-    <p>Ada beberapa jenis website yang bisa ditemui di internet. Salah satunya adalah&nbsp;website toko online, yang digunakan untuk menjual produk secara online.</p>
-    <p>Selain itu, terdapat juga website pribadi yang bisa digunakan sebagai media untuk berbagi informasi pribadi atau karya-karya seni. Ingin tahu lebih lengkap apa saja jenis-jenisnya? Simak informasinya berikut ini.</p>
-</div>
+<?php
+$galeri = "SELECT * FROM galeri ORDER BY id_galeri";
+$querygaleri = mysqli_query($conn, $galeri);
+
+if (isset($_GET['page']) && $_GET['page'] == 'edit_galeri') {
+    include 'page/tambah_galeri.php';
+} else {
+?>
+
+    <body class="bg-gray-200">
+        <div class="p-4 flex">
+            <h1 class="text-xl">
+                Daftar Pesan
+            </h1>
+        </div>
+        <div class=" px-3 py-4 flex justify-between">
+            <div>
+                <button class="mr-3 text-sm bg-blue-500 hover:bg-blue-700 text-white py-1 px-2 rounded focus:outline-none focus:shadow-outline">
+                    <a href="?page=tambah_galeri">Tambah</a>
+                </button>
+            </div>
+            <div class="mb-3">
+                <div class="flex mb-4 flex w-full flex-wrap ">
+                    <input type="search" class="mx-auto m-0 -mr-0.5 block min-w-0 flex-auto rounded-l border border-solid border-gray-300 bg-white bg-clip-padding px-3 py-[0.25rem] text-base font-normal leading-[1.6]  outline-none transition duration-200 ease-in-out focus:z-[3] focus:border-primary focus:text-blackfocus:shadow-[inset_0_0_0_1px_rgb(59,113,202)] focus:outline-none dark:border-gray-600 dark:focus:border-primary" placeholder="Search" aria-label="Search" aria-describedby="button-addon1" />
+
+                    <!--Search button-->
+                    <button class=" flex items-center rounded-r bg-blue-500 px-6 py-2.5 text-xs font-medium uppercase leading-tight text-white shadow-md transition duration-150 ease-in-out hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-primary-800 active:shadow-lg" type="button" id="button-addon1" data-te-ripple-init data-te-ripple-color="light">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5">
+                            <path fill-rule="evenodd" d="M9 3.5a5.5 5.5 0 100 11 5.5 5.5 0 000-11zM2 9a7 7 0 1112.452 4.391l3.328 3.329a.75.75 0 11-1.06 1.06l-3.329-3.328A7 7 0 012 9z" clip-rule="evenodd" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <section class="w-[100%] mx-auto ">
+            <div class="container flex flex-nowrap w-[90%] gap-5 columns-3 mx-auto grid px-4 py-16 lg:grid-cols-12">
+                <?php
+                while ($row_galeri = mysqli_fetch_assoc($querygaleri)) {
+                ?>
+                    <a href="?page=detail_galeri&id_galeri=<?= $row_galeri['id_galeri'] ?>" class="card-galeri justify-center p-2 bg-gray-700 text-white md:col-span-3 lg:col-span-3 rounded-lg">
+                        <h1 class="text-center pt-3 text-lg"><b><?= $row_galeri['judul'] ?></b></h1>
+                        <img src="<?= $row_galeri['img'] ?>" alt="" class="h-60 pt-3 w-[100%]">
+                        <p class="text-justify text-sm pt-3 line-clamp-3"><?= $row_galeri['deskripsi'] ?></p>
+                    </a>
+                <?php
+                }
+                ?>
+            </div>
+        </section>
+
+        <script>
+            function editUser() {
+                window.location.href = "?page=edit_user&id_galeri=<?= $row['id_galeri'] ?>";
+            }
+        </script>
+    </body>
+
+    </html>
+<?php
+}
+?>

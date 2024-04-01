@@ -52,6 +52,9 @@ $edited_by = $row_artikel['edited_by'];
 $konten = $row_artikel['content'];
 $konten = str_replace('<h2>', '<h2 style="font-size: 2rem; font-weight: bold;">', $konten);
 $konten = str_replace('<h3>', '<h3 style="font-size: 1.4rem; font-weight: bold;">', $konten);
+$konten = str_replace('<em>', '<em style=" font-style: italic;">', $konten);
+$konten = str_replace('<code>', '<code class="italic bg-gray-200">', $konten);
+$konten = str_replace('<pre>', '<pre class="italic bg-gray-200">', $konten);
 $konten = str_replace('<p>', '<p style="font-size: 1rem;">', $konten);
 ?>
 <section class="">
