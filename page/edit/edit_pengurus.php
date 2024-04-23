@@ -16,7 +16,7 @@ if (isset($_POST["submit"])) {
 
 
     if ($_FILES['fotopengurus']['size'] > 0) {
-        $uploadDir = "uploads/pengurus/";
+        $uploadDir = "public/uploads/pengurus/";
         $new_foto = $uploadDir . basename($_FILES['fotopengurus']['name']);
         if (!move_uploaded_file($_FILES['fotopengurus']['tmp_name'], $new_foto)) {
             $new_foto = $row['foto'];

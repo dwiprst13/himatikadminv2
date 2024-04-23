@@ -9,7 +9,7 @@ if (isset($_POST["submit"])) {
     $new_deskripsi = $_POST["new_deskripsi"];
 
     if ($_FILES['new_foto']['size'] > 0) {
-        $uploadDir = "uploads/galeri/";
+        $uploadDir = "public/uploads/galeri/";
         $new_foto = $uploadDir . basename($_FILES['new_foto']['name']);
         if (!move_uploaded_file($_FILES['new_foto']['tmp_name'], $new_foto)) {
             $new_foto = $row['img'];

@@ -37,55 +37,59 @@ $data_admin_login = mysqli_fetch_array($q_data_admin_login);
         </a>
         <ul class="mt-4">
             <li class="mb-1 group">
-                <a href="/himatikadmin/dashboard" class="flex items-center py-2 px-4 text-gray-300 rounded-md <?php echo ($_GET['page'] == 'dashboard') ? 'bg-blue-500 hover:bg-blue-500' : 'hover:bg-gray-950 hover:text-gray-100 '; ?>">
+                <?php
+                $currentPath = rtrim($_SERVER['REQUEST_URI'], '/');
+                $isActive = $currentPath == '/himatikadmin' || $currentPath == '/himatikadmin/dashboard';
+                ?>
+                <a href="/himatikadmin/dashboard" class="flex items-center py-2 px-4 text-gray-300 rounded-md <?php echo $isActive ? 'bg-blue-500 hover:bg-blue-500' : 'hover:bg-gray-950 hover:text-gray-100 '; ?>">
                     <i class="ri-home-2-line mr-3 text-lg"></i>
                     <span class="text-sm">Dashboard</span>
                 </a>
             </li>
             <li class="mb-1 group ">
-                <a href="/himatikadmin/admin" class="flex items-center py-2 px-4 text-gray-300 rounded-md <?php echo ($_GET['page'] == 'admin') ? 'bg-blue-500 hover:bg-blue-500' : 'hover:bg-gray-950 hover:text-gray-100 '; ?>">
+                <a href="/himatikadmin/admin" class="flex items-center py-2 px-4 text-gray-300 rounded-md <?php echo ($page == 'admin' || $page == 'edit_admin' || $page == 'tambah_admin') ? 'bg-blue-500 hover:bg-blue-500' : 'hover:bg-gray-950 hover:text-gray-100 '; ?>">
                     <i class="ri-home-2-line mr-3 text-lg"></i>
                     <span class="text-sm">Admin</span>
                 </a>
             </li>
             <li class="mb-1 group">
-                <a href="/himatikadmin/pengurus" class="flex items-center py-2 px-4 text-gray-300 rounded-md <?php echo ($_GET['page'] == 'pengurus') ? 'bg-blue-500 hover:bg-blue-500' : 'hover:bg-gray-950 hover:text-gray-100 '; ?>">
+                <a href="/himatikadmin/pengurus" class="flex items-center py-2 px-4 text-gray-300 rounded-md <?php echo ($page == 'pengurus' || $page == 'edit_pengurus' || $page == 'tambah_pengurus') ? 'bg-blue-500 hover:bg-blue-500' : 'hover:bg-gray-950 hover:text-gray-100 '; ?>">
                     <i class="ri-settings-2-line mr-3 text-lg"></i>
                     <span class="text-sm">Pengurus</span>
                 </a>
             </li>
             <li class="mb-1 group ">
-                <a href="/himatikadmin/divisi" class="flex items-center py-2 px-4 text-gray-300 rounded-md <?php echo ($_GET['page'] == 'divisi') ? 'bg-blue-500 hover:bg-blue-500' : 'hover:bg-gray-950 hover:text-gray-100 '; ?>">
+                <a href="/himatikadmin/divisi" class="flex items-center py-2 px-4 text-gray-300 rounded-md <?php echo ($page == 'divisi' || $page == 'edit_divisi' || $page == 'tambah_divisi') ? 'bg-blue-500 hover:bg-blue-500' : 'hover:bg-gray-950 hover:text-gray-100 '; ?>">
                     <i class="ri-home-2-line mr-3 text-lg"></i>
                     <span class="text-sm">Divisi</span>
                 </a>
             </li>
             <li class="mb-1 group">
-                <a href="/himatikadmin/proker" class="flex items-center py-2 px-4 text-gray-300 rounded-md <?php echo ($_GET['page'] == 'proker') ? 'bg-blue-500 hover:bg-blue-500' : 'hover:bg-gray-950 hover:text-gray-100 '; ?>">
+                <a href="/himatikadmin/proker" class="flex items-center py-2 px-4 text-gray-300 rounded-md <?php echo ($page == 'proker' || $page == 'edit_proker' || $page == 'tambah_proker') ? 'bg-blue-500 hover:bg-blue-500' : 'hover:bg-gray-950 hover:text-gray-100 '; ?>">
                     <i class="ri-settings-2-line mr-3 text-lg"></i>
                     <span class="text-sm">Proker</span>
                 </a>
             </li>
             <li class="mb-1 group ">
-                <a href="/himatikadmin/artikel" class="flex items-center py-2 px-4 text-gray-300 rounded-md <?php echo ($_GET['page'] == 'artikel') ? 'bg-blue-500 hover:bg-blue-500' : 'hover:bg-gray-950 hover:text-gray-100 '; ?>">
+                <a href="/himatikadmin/artikel" class="flex items-center py-2 px-4 text-gray-300 rounded-md <?php echo ($page == 'artikel' || $page == 'edit_artikel' || $page == 'detail_artikel'|| $page == 'tambah_artikel') ? 'bg-blue-500 hover:bg-blue-500' : 'hover:bg-gray-950 hover:text-gray-100 '; ?>">
                     <i class="ri-home-2-line mr-3 text-lg"></i>
                     <span class="text-sm">Artikel</span>
                 </a>
             </li>
             <li class="mb-1 group ">
-                <a href="/himatikadmin/galeri" class="flex items-center py-2 px-4 text-gray-300 rounded-md <?php echo ($_GET['page'] == 'galeri') ? 'bg-blue-500 hover:bg-blue-500' : 'hover:bg-gray-950 hover:text-gray-100 '; ?>">
+                <a href="/himatikadmin/galeri" class="flex items-center py-2 px-4 text-gray-300 rounded-md <?php echo ($page == 'galeri' || $page == 'edit_galeri' || $page == 'tambah_galeri') ? 'bg-blue-500 hover:bg-blue-500' : 'hover:bg-gray-950 hover:text-gray-100 '; ?>">
                     <i class="ri-home-2-line mr-3 text-lg"></i>
                     <span class="text-sm">Galeri</span>
                 </a>
             </li>
             <li class="mb-1 group ">
-                <a href="/himatikadmin/info" class="flex items-center py-2 px-4 text-gray-300 rounded-md <?php echo ($_GET['page'] == 'info') ? 'bg-blue-500 hover:bg-blue-500' : 'hover:bg-gray-950 hover:text-gray-100 '; ?>">
+                <a href="/himatikadmin/info" class="flex items-center py-2 px-4 text-gray-300 rounded-md <?php echo ($page == 'info' || $page == 'edit_info' || $page == 'tambah_info') ? 'bg-blue-500 hover:bg-blue-500' : 'hover:bg-gray-950 hover:text-gray-100 '; ?>">
                     <i class="ri-home-2-line mr-3 text-lg"></i>
                     <span class="text-sm">Info</span>
                 </a>
             </li>
             <li class="mb-1 group">
-                <a href="/himatikadmin/pesan" class="flex items-center py-2 px-4 text-gray-300 rounded-md <?php echo ($_GET['page'] == 'pesan') ? 'bg-blue-500 hover:bg-blue-500' : 'hover:bg-gray-950 hover:text-gray-100 '; ?>">
+                <a href="/himatikadmin/pesan" class="flex items-center py-2 px-4 text-gray-300 rounded-md <?php echo ($page == 'pesan' || $page == 'edit_pesan' || $page == 'tambah_pesan') ? 'bg-blue-500 hover:bg-blue-500' : 'hover:bg-gray-950 hover:text-gray-100 '; ?>">
                     <i class="ri-settings-2-line mr-3 text-lg"></i>
                     <span class="text-sm">Pesan</span>
                 </a>
@@ -113,23 +117,23 @@ $data_admin_login = mysqli_fetch_array($q_data_admin_login);
                     include 'page/artikel.php';
                     break;
                 case 'tambah_artikel':
-                    include 'ekstra/tambah_artikel.php';
+                    include 'page/tambah/tambah_artikel.php';
                     break;
                 case 'edit_artikel':
-                    include 'ekstra/edit_artikel.php';
+                    include 'page/edit/edit_artikel.php';
                     break;
                 case 'detail_artikel':
-                    include 'ekstra/detail_artikel.php';
+                    include 'page/detail/detail_artikel.php';
                     break;
                     // ===================> Include page admin <===================
                 case 'admin':
                     include 'page/admin.php';
                     break;
                 case 'tambah_admin':
-                    include 'ekstra/tambah_admin.php';
+                    include 'page/tambah/tambah_admin.php';
                     break;
                 case 'edit_admin':
-                    include 'ekstra/edit_admin.php';
+                    include 'page/edit/edit_admin.php';
                     break;
                 case 'search_admin':
                     include 'ekstra/search_admin.php';
@@ -139,10 +143,10 @@ $data_admin_login = mysqli_fetch_array($q_data_admin_login);
                     include 'page/galeri.php';
                     break;
                 case 'edit_galeri':
-                    include 'ekstra/edit_galeri.php';
+                    include 'page/edit/edit_galeri.php';
                     break;
                 case 'tambah_galeri':
-                    include 'ekstra/tambah_galeri.php';
+                    include 'page/tambah/tambah_galeri.php';
                     break;
                 default:
                     include 'page/dashboard.php';
@@ -152,50 +156,50 @@ $data_admin_login = mysqli_fetch_array($q_data_admin_login);
                     include 'page/divisi.php';
                     break;
                 case 'edit_divisi':
-                    include 'ekstra/edit_divisi.php';
+                    include 'page/edit/edit_divisi.php';
                     break;
                 case 'tambah_divisi':
-                    include 'ekstra/tambah_divisi.php';
+                    include 'page/tambah/tambah_divisi.php';
                     break;
                     // ===================> Include page info <===================
                 case 'info':
                     include 'page/info.php';
                     break;
                 case 'edit_info':
-                    include 'ekstra/edit_info.php';
+                    include 'page/edit/edit_info.php';
                     break;
                 case 'tambah_info':
-                    include 'ekstra/tambah_info.php';
+                    include 'page/tambah/tambah_info.php';
                     break;
                     // ===================> Include page pengurus <===================
                 case 'pengurus':
                     include 'page/pengurus.php';
                     break;
                 case 'edit_pengurus':
-                    include 'ekstra/edit_pengurus.php';
+                    include 'page/edit/edit_pengurus.php';
                     break;
                 case 'tambah_pengurus':
-                    include 'ekstra/tambah_pengurus.php';
+                    include 'page/tambah/tambah_pengurus.php';
                     break;
                     // ===================> Include page pesan <===================
                 case 'pesan':
                     include 'page/pesan.php';
                     break;
                 case 'edit_pesan':
-                    include 'ekstra/edit_pesan.php';
+                    include 'page/edit/edit_pesan.php';
                     break;
                 case 'tambah_pesan':
-                    include 'ekstra/tambah_pesan.php';
+                    include 'page/tambah/tambah_pesan.php';
                     break;
                     // ===================> Include page proker <===================
                 case 'proker':
                     include 'page/proker.php';
                     break;
                 case 'edit_proker':
-                    include 'ekstra/edit_proker.php';
+                    include 'page/edit/edit_proker.php';
                     break;
                 case 'tambah_proker':
-                    include 'ekstra/tambah_proker.php';
+                    include 'page/tambah/tambah_proker.php';
                     break;
             }
             ?>

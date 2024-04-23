@@ -6,7 +6,7 @@ if (isset($_POST["submit"])) {
     $tag = $_POST["tag"];
     // $author = $_POST["author"];
     $status = $_POST["status"];
-    $target_dir = "uploads/artikel/";
+    $target_dir = "public/uploads/artikel/";
     $target_file = $target_dir . basename($_FILES["foto"]["name"]);
     move_uploaded_file($_FILES["foto"]["tmp_name"], $target_file);
     $sql = "INSERT INTO artikel (judul, img, content, tag, status, date) VALUES ('$judul', '$target_file', '$isi', '$tag', '$status', CURRENT_TIMESTAMP)";

@@ -3,7 +3,7 @@
 if (isset($_POST["submit"])) {
     $judul = $_POST["judul"];
     $deskripsi = $_POST["deskripsi"];
-    $target_dir = "uploads/galeri/";
+    $target_dir = "public/uploads/galeri/";
     $target_file = $target_dir . basename($_FILES["foto"]["name"]);
     move_uploaded_file($_FILES["foto"]["tmp_name"], $target_file);
     $sql = "INSERT INTO galeri (img, judul, deskripsi) VALUES ('$target_file', '$judul', '$deskripsi')";
@@ -22,7 +22,7 @@ if (isset($_POST["submit"])) {
 
 <body class="flex">
 
-    <body class=" w-[80%] h-screen">
+    <body class=" w-[80%] h-screen space-y-5">
         <div class="flex text-sm md:text-base h-24 w-[90%] mx-auto text-lg ">
             <div class="place-self-center">
                 <p>Tambah Galeri</p>

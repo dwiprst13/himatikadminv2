@@ -13,7 +13,7 @@ if (isset($_POST["submit"])) {
     $edited_by = "Editor";
 
     if ($_FILES['new_foto']['size'] > 0) {
-        $uploadDir = "uploads/artikel/";
+        $uploadDir = "public/uploads/artikel/";
         $new_foto = $uploadDir . basename($_FILES['new_foto']['name']);
         if (!move_uploaded_file($_FILES['new_foto']['tmp_name'], $new_foto)) {
             $new_foto = $row['img'];

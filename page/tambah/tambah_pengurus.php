@@ -10,7 +10,7 @@ if (isset($_POST["submit"])) {
     $linkedin = $_POST["linkedin_link"];
     $github = $_POST["github_link"];
 
-    $target_dir = "uploads/pengurus/";
+    $target_dir = "public/uploads/pengurus/";
     $target_file = $target_dir . basename($_FILES["fotopengurus"]["name"]);
 
     if (move_uploaded_file($_FILES["fotopengurus"]["tmp_name"], $target_file)) {
